@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>JavaScript Form</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicios de JavaScript</h1>
+    </header>
+
+    <main>
+        <h2>Selecciona un ejercicio</h2>
+        <form action="#">
+            <select name="exercises" id="exercises">
+                <option value="0">Indique el ejercicio</option>
+                <option value="1" id="exercises">Suma y Resta</option>
+                <option value="2">Paridad</option>
+                <option value="3">Palindromos</option>
+                <option value="4">Numeros Romanos</option>
+            </select>
+            <br>
+            <input type="text" id="get-numbers" placeholder="indique los numeros">
+            <br>
+            <input type="text" id="get-number" placeholder="indique el numero a sumar o restar">
+            <br>
+            <label for="add">Sumar</label>
+            <input type="radio" id="add">
+            <label for="rest">Restar</label>
+            <input type="radio" id="rest"> 
+            <br>
+            <button type="submit" id="btn-submit">Enviar</button>
+        </form>
+        
+        <section id="resultContainer">
+            <h2>Resultado</h2>
+
+            <div id="result"></div>
+        </section>
+
+    </main>
+
+
+    <script src="exercises.js"></script>
+</body>
+</html>
