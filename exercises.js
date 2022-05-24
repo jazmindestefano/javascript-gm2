@@ -1,36 +1,3 @@
-const exercises = document.getElementById("exercises");
-const btnSubmit = document.getElementById("btn-submit");
-const numbers = document.getElementById("get-numbers");
-const getNumber = document.getElementById("get-number");
-const addBtn = document.getElementById("add");
-const restBtn = document.getElementById("rest");
-const result = document.getElementById("result");
-
-
-
-
-let arrayNum = numbers.value;
-let num = getNumber.value;
-const printResult = (event) => {
-    event.preventDefault();
-    
-    if (btnSubmit) {
-
-        if(addBtn.checked) {
-            result.innerHTML = "<p> El resultado de la suma es " + addition(arrayNum. num) + "</p>";
-        }
-    
-        if(restBtn.checked) {
-            result.innerHTML = "<p> El resultado de la resta es " + rest(arrayNum, num) + "</p>";
-        }
-    }
-    
-}
-
-
-
-
-
 //EJERCICIO 1
 
 //En JS , se identifica el tipo de dato por si solo, 
@@ -39,7 +6,7 @@ const printResult = (event) => {
 /* ADICION */
 
 
-function addition (arrayNum, num) {
+export function addition (arrayNum, numero) {
 
     //añadir nuevo array para guardar el numero como string
     let arrayNuevoNum = "";
@@ -58,7 +25,7 @@ function addition (arrayNum, num) {
     arrayNuevoNum = Number(arrayNuevoNum);
 
     //realizar la suma
-    arrayNuevoNum += num;
+    arrayNuevoNum += numero;
 
     //convertir arrayNuevoNum a un array
     let arrayResult = String(arrayNuevoNum).split("").map((arrayNuevoNum) => {
@@ -69,15 +36,12 @@ function addition (arrayNum, num) {
     return arrayResult;
 }
 
-console.log(arrayNum);
-console.log(num);
-console.log(addition(arrayNum, num));
 
 /*******************************************************************/
 
 /* RESTA */
 
-function rest (arrayNum, num) {
+export function rest (arrayNum, numero) {
 
     //añadir nuevo array para guardar el numero como string
     let arrayNuevoNum = "";
@@ -96,7 +60,7 @@ function rest (arrayNum, num) {
     arrayNuevoNum = Number(arrayNuevoNum);
 
     //realizar la resta
-    arrayNuevoNum -= num;
+    arrayNuevoNum -= numero;
 
     let arrayResult;
     //convertir arrayNuevoNum a un array
@@ -112,9 +76,6 @@ function rest (arrayNum, num) {
     return arrayResult;
 }
 
-console.log(arrayNum);
-console.log(num);
-console.log(rest(arrayNum, num));
 
 /*******************************************************************/
 

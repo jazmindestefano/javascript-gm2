@@ -15,36 +15,26 @@
 
     <main>
         <h2>Selecciona un ejercicio</h2>
-        <form action="#">
-            <select name="exercises" id="exercises">
-                <option value="0">Indique el ejercicio</option>
-                <option value="1" id="exercises">Suma y Resta</option>
-                <option value="2">Paridad</option>
-                <option value="3">Palindromos</option>
-                <option value="4">Numeros Romanos</option>
-            </select>
+        <br>
+        <form>
+            <input type="number" id="array" name="array" placeholder="indique los numeros">
             <br>
-            <input type="text" id="get-numbers" placeholder="indique los numeros">
             <br>
-            <input type="text" id="get-number" placeholder="indique el numero a sumar o restar">
+            <input type="number" id="number" name="number"  placeholder="indique el numero a sumar o restar">
             <br>
-            <label for="add">Sumar</label>
-            <input type="radio" id="add">
-            <label for="rest">Restar</label>
-            <input type="radio" id="rest"> 
             <br>
-            <button type="submit" id="btn-submit">Enviar</button>
+            <button type="submit" id="add">Sumar</button>
+            <button type="submit" id="rest">Restar</button>
         </form>
-        
+        <br>
         <section id="resultContainer">
-            <h2>Resultado</h2>
-
-            <div id="result"></div>
+            <p id="result"></p>
         </section>
 
     </main>
 
 
-    <script src="exercises.js"></script>
+    <script type="module" src="exercises.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
